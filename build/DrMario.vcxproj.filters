@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Prog_Avanc_II_DrMario">
+			<UniqueIdentifier>{A4FA5640-A831-4B51-989D-2CB41F1C2A1E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Prog_Avanc_II_DrMario\Sources">
+			<UniqueIdentifier>{7B3775FE-68FE-4A85-8CA6-9D21FED3EA73}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Prog_Avanc_II_Engine">
+			<UniqueIdentifier>{CEC4F587-7EC9-43AE-ADEB-7AB7EE58BC8F}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Prog_Avanc_II_Engine\Includes">
+			<UniqueIdentifier>{EDAC0CF2-C333-4739-980F-C0AACCC1684E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Prog_Avanc_II_Engine\Sources">
+			<UniqueIdentifier>{C024580C-D33D-4777-AE08-B2CE757ABF0A}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\Engine.h">
+			<Filter>Prog_Avanc_II_Engine\Includes</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\IGfx.h">
+			<Filter>Prog_Avanc_II_Engine\Includes</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\IInput.h">
+			<Filter>Prog_Avanc_II_Engine\Includes</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\SDLGfx.h">
+			<Filter>Prog_Avanc_II_Engine\Includes</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\SdlInput.h">
+			<Filter>Prog_Avanc_II_Engine\Includes</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="..\Prog_Avanc_II_DrMario\Sources\main.cpp">
+			<Filter>Prog_Avanc_II_DrMario\Sources</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Prog_Avanc_II_Engine\Sources\Engine.cpp">
+			<Filter>Prog_Avanc_II_Engine\Sources</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Prog_Avanc_II_Engine\Sources\SDLGfx.cpp">
+			<Filter>Prog_Avanc_II_Engine\Sources</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Prog_Avanc_II_Engine\Sources\SdlInput.cpp">
+			<Filter>Prog_Avanc_II_Engine\Sources</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+	</ItemGroup>
+</Project>

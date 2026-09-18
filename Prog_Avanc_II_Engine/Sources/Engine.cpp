@@ -1,13 +1,13 @@
 #include "Engine.h"
 #include "SDLGfx.h"
-#include "input.h"
+#include "SdlInput.h"
 #include <Windows.h>
 #include <ctime>
 
 bool homer::Engine::Init(const char* title, int width, int height){
 
 	m_gfx = new SDLGfx();
-	m_input = new input();
+	m_input = new SdlInput();
 
 	if(!m_gfx->Init(title, width, height)) {
 		return false;
@@ -15,7 +15,6 @@ bool homer::Engine::Init(const char* title, int width, int height){
 
 	m_isInit = true;
     return m_isInit;
-
 	
 }
 
@@ -37,7 +36,7 @@ void homer::Engine::Start(){
 		ProcessInput();
 		Update(m_deltaTime);
 		Render();
-		float frametime = _start + CLOCKS_PER_SEC / 60 - clock();
+		clock_t frametime = _start + CLOCKS_PER_SEC / 60 - clock();
 		
 		if (frametime > 0) {
 			Sleep(frametime);
@@ -47,14 +46,15 @@ void homer::Engine::Start(){
 	Shutdown();
 }
 
-void homer::Engine::ProcessInput(){
+void homer::Engine::ProcessInput()
+{
 
-	m_input->ProcessInput();
+	m_input->Update();
 }
 
-void homer::Engine::Update(float dt){
-
-	m_rectY -= (m_rectSpeed * dt) * m_input->UpdateInput(dt);
+void homer::Engine::Update(float dt)
+{
+	//m_rectY -= (m_rectSpeed * dt) * m_input->UpdateInput(dt);
 	//if (_keyStates[SDL_SCANCODE_S]) {
 	//	//m_rectY += m_rectSpeed * dt;
 	//}
@@ -80,9 +80,18 @@ void homer::Engine::Render(){
 void homer::Engine::Shutdown(){
 	
 	m_gfx->Shutdown();
+	
+	if(m_input != nullptr) 
+	{
+		delete m_input;
+		m_input = nullptr;
+	}
 
-	delete m_gfx;
-	m_gfx = nullptr;
+	if(m_gfx != nullptr) 
+	{
+		delete m_gfx;
+		m_gfx = nullptr;
+	}	
 }
 
 void homer::Engine::Exit()

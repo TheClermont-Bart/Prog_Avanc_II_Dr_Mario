@@ -27,14 +27,6 @@ int SDLGfx::Init(const char* title, int width, int height)
 	return true;
 }
 
-void SDLGfx::Shutdown()
-{
-	SDL_DestroyRenderer(m_renderer);
-
-	SDL_DestroyWindow(m_window);
-
-	SDL_Quit();
-}
 
 void SDLGfx::SetColor(const Color& color)
 {
@@ -60,4 +52,13 @@ void SDLGfx::DrawRect(float x, float y, float w, float h, const Color& color)
 	rect.h = static_cast<int>(h);
 	SDL_SetRenderDrawColor(m_renderer,color.r, color.g, color.b, color.a);
 	SDL_RenderDrawRect(m_renderer, &rect);
+}
+
+void SDLGfx::Shutdown()
+{
+	SDL_DestroyRenderer(m_renderer);
+
+	SDL_DestroyWindow(m_window);
+
+	SDL_Quit();
 }

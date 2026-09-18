@@ -1,0 +1,80 @@
+#include "SDL.h"
+#include "SdlInput.h"
+
+char keys[static_cast<int>(EKey::EKEY_MAX)] = {
+	SDL_SCANCODE_A,
+	SDL_SCANCODE_B,
+	SDL_SCANCODE_C,
+	SDL_SCANCODE_D,
+	SDL_SCANCODE_E,
+	SDL_SCANCODE_F,
+	SDL_SCANCODE_G,
+	SDL_SCANCODE_H,
+	SDL_SCANCODE_I,
+	SDL_SCANCODE_J,
+	SDL_SCANCODE_K,
+	SDL_SCANCODE_L,
+	SDL_SCANCODE_M,
+	SDL_SCANCODE_N,
+	SDL_SCANCODE_O,
+	SDL_SCANCODE_P,
+	SDL_SCANCODE_Q,
+	SDL_SCANCODE_R,
+	SDL_SCANCODE_S,
+	SDL_SCANCODE_T,
+	SDL_SCANCODE_U,
+	SDL_SCANCODE_V,
+	SDL_SCANCODE_W,
+	SDL_SCANCODE_X,
+	SDL_SCANCODE_Y,
+	SDL_SCANCODE_Z,
+	SDL_SCANCODE_1,
+	SDL_SCANCODE_2,
+	SDL_SCANCODE_3,
+	SDL_SCANCODE_4,
+	SDL_SCANCODE_5,
+	SDL_SCANCODE_6,
+	SDL_SCANCODE_7,
+	SDL_SCANCODE_8,
+	SDL_SCANCODE_9,
+	SDL_SCANCODE_0,
+	SDL_SCANCODE_RETURN,
+	SDL_SCANCODE_ESCAPE,
+	SDL_SCANCODE_BACKSPACE,
+	SDL_SCANCODE_TAB,
+	SDL_SCANCODE_SPACE,
+	SDL_SCANCODE_MINUS,
+	SDL_SCANCODE_EQUALS,
+	SDL_SCANCODE_LEFTBRACKET,
+	SDL_SCANCODE_RIGHTBRACKET,
+	SDL_SCANCODE_BACKSLASH
+};
+
+void SdlInput::Update()
+{
+	const unsigned char* buffer;
+	buffer = SDL_GetKeyboardState(NULL);
+	if(buffer != NULL) {
+		m_keyStates = buffer;
+	}
+}
+
+bool SdlInput::IsKeyDown(int key)
+{
+	if(m_keyStates[static_cast<int>(key)] == 1)
+	{
+		return true;
+	}
+	
+	return false;
+}
+
+bool SdlInput::IsButtonDown(int button)
+{
+	return false;
+}
+
+void SdlInput::GetMousePosition(int* x, int* y)
+{
+
+}
