@@ -1,0 +1,91 @@
+#include "Engine.h"
+#include "SDLGfx.h"
+#include "input.h"
+#include <Windows.h>
+#include <ctime>
+
+bool homer::Engine::Init(const char* title, int width, int height){
+
+	m_gfx = new SDLGfx();
+	m_input = new input();
+
+	if(!m_gfx->Init(title, width, height)) {
+		return false;
+	}
+
+	m_isInit = true;
+    return m_isInit;
+
+	
+}
+
+void homer::Engine::Start(){
+    if (!m_isInit) {
+		if(!Init("Unknown Title", 800, 600)) {
+			return;
+		}
+    }
+
+	m_isRunning = true;
+	clock_t _end = clock();
+
+	while (m_isRunning) {
+		clock_t _start = clock();
+		m_deltaTime = static_cast<float>(_start - _end) / CLOCKS_PER_SEC;
+		_end = _start;
+
+		ProcessInput();
+		Update(m_deltaTime);
+		Render();
+		float frametime = _start + CLOCKS_PER_SEC / 60 - clock();
+		
+		if (frametime > 0) {
+			Sleep(frametime);
+		}
+	}
+
+	Shutdown();
+}
+
+void homer::Engine::ProcessInput(){
+
+	m_input->ProcessInput();
+}
+
+void homer::Engine::Update(float dt){
+
+	m_rectY -= (m_rectSpeed * dt) * m_input->UpdateInput(dt);
+	//if (_keyStates[SDL_SCANCODE_S]) {
+	//	//m_rectY += m_rectSpeed * dt;
+	//}
+	//if (_keyStates[SDL_SCANCODE_A]) {
+	//	//m_rectX -= m_rectSpeed * dt;
+	//}
+	//if (_keyStates[SDL_SCANCODE_D]) {
+	//	//m_rectX += m_rectSpeed * dt;
+	//}
+}
+
+void homer::Engine::Render(){
+
+	m_gfx->SetColor({ 0, 0, 0, 255 });
+	m_gfx->Clear();
+
+	m_gfx->DrawRect(m_rectX, m_rectY, 100.0f, 100.0f, { 255, 0, 0, 255 });
+
+	m_gfx->Present();
+
+}
+
+void homer::Engine::Shutdown(){
+	
+	m_gfx->Shutdown();
+
+	delete m_gfx;
+	m_gfx = nullptr;
+}
+
+void homer::Engine::Exit()
+{
+	m_isRunning = false;
+}
