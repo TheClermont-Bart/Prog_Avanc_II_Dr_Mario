@@ -2,22 +2,25 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
 		<Filter Include="Prog_Avanc_II_DrMario">
-			<UniqueIdentifier>{A4FA5640-A831-4B51-989D-2CB41F1C2A1E}</UniqueIdentifier>
+			<UniqueIdentifier>{C338E798-67FB-4CEF-BA8C-C12F2A42850A}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Prog_Avanc_II_DrMario\Sources">
-			<UniqueIdentifier>{7B3775FE-68FE-4A85-8CA6-9D21FED3EA73}</UniqueIdentifier>
+			<UniqueIdentifier>{592803A5-7FD4-46E5-A3F2-EF0082C1585A}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Prog_Avanc_II_Engine">
-			<UniqueIdentifier>{CEC4F587-7EC9-43AE-ADEB-7AB7EE58BC8F}</UniqueIdentifier>
+			<UniqueIdentifier>{4B64F9DA-3EAD-47FB-B972-768E5BD49B59}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Prog_Avanc_II_Engine\Includes">
-			<UniqueIdentifier>{EDAC0CF2-C333-4739-980F-C0AACCC1684E}</UniqueIdentifier>
+			<UniqueIdentifier>{B40C4B18-9255-4457-B015-BF9F4B49E333}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Prog_Avanc_II_Engine\Sources">
-			<UniqueIdentifier>{C024580C-D33D-4777-AE08-B2CE757ABF0A}</UniqueIdentifier>
+			<UniqueIdentifier>{DC4B1372-D0CA-4569-A5F5-F36C338A4B1A}</UniqueIdentifier>
 		</Filter>
 	</ItemGroup>
 	<ItemGroup>
+		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\Console_Log.h">
+			<Filter>Prog_Avanc_II_Engine\Includes</Filter>
+		</ClInclude>
 		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\Engine.h">
 			<Filter>Prog_Avanc_II_Engine\Includes</Filter>
 		</ClInclude>
@@ -25,6 +28,9 @@
 			<Filter>Prog_Avanc_II_Engine\Includes</Filter>
 		</ClInclude>
 		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\IInput.h">
+			<Filter>Prog_Avanc_II_Engine\Includes</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\ILogger.h">
 			<Filter>Prog_Avanc_II_Engine\Includes</Filter>
 		</ClInclude>
 		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\SDLGfx.h">
@@ -37,6 +43,9 @@
 	<ItemGroup>
 		<ClCompile Include="..\Prog_Avanc_II_DrMario\Sources\main.cpp">
 			<Filter>Prog_Avanc_II_DrMario\Sources</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Prog_Avanc_II_Engine\Sources\Console_Log.cpp">
+			<Filter>Prog_Avanc_II_Engine\Sources</Filter>
 		</ClCompile>
 		<ClCompile Include="..\Prog_Avanc_II_Engine\Sources\Engine.cpp">
 			<Filter>Prog_Avanc_II_Engine\Sources</Filter>

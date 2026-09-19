@@ -1,7 +1,5 @@
 #pragma once
-#include "Iinput.h"
-
-
+#include "IInput.h"
 
 class SdlInput final : public IInput 
 {

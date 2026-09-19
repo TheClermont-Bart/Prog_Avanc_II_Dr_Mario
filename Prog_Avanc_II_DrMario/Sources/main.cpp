@@ -1,11 +1,9 @@
-#include "Engine.h"
-
 #ifdef _WIN32
 
 #ifdef _DEBUG
 #include "vld.h"
 #endif
-
+#include "Engine.h"
 #define WIN32_LEAN_AND_MEAN
 #define VC_EXTRALEAN
 #include <windows.h>
@@ -18,5 +16,6 @@ int main(int argc, char** argv) {
 	homer::Engine* eng = homer::Engine::Get();
 	eng->Init("Dr.Mario", 800, 600);
 	eng->Start();
+	delete eng;
 	return 0;
 }

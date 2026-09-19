@@ -1,7 +1,9 @@
 #include "SDL.h"
 #include "SdlInput.h"
+#include "Engine.h"
 
-char keys[static_cast<int>(EKey::EKEY_MAX)] = {
+char keys[static_cast<int>(EKey::EKEY_MAX)] =
+{
 	SDL_SCANCODE_A,
 	SDL_SCANCODE_B,
 	SDL_SCANCODE_C,
@@ -52,29 +54,77 @@ char keys[static_cast<int>(EKey::EKEY_MAX)] = {
 
 void SdlInput::Update()
 {
+	SDL_Event _event;
+
+	while (SDL_PollEvent(&_event))
+	{
+		switch (_event.type)
+		{
+		case SDL_QUIT:
+		{
+			homer::Engine::Get()->Exit();
+			break;
+		}
+		case SDL_MOUSEBUTTONDOWN:
+		{
+			SDL_MouseButtonEvent _buttonDown = _event.button;
+			//SDL_Log("Button down : %d)", _buttonDown.button);
+			//SDL_Log("at (%d, %d)", _buttonDown.x, _buttonDown.y);
+			break;
+		}
+		case SDL_MOUSEBUTTONUP:
+		{
+			SDL_MouseButtonEvent _buttonUp = _event.button;
+			//SDL_Log("Button up : %d", _buttonUp.button);
+			//SDL_Log("at (%d, %d)", _buttonUp.x, _buttonUp.y);
+			break;
+		}
+		case SDL_MOUSEMOTION:
+		{
+			SDL_MouseMotionEvent _motion = _event.motion;
+
+			//SDL_Log("%d, %d", _motion.x, _motion.y);
+			break;
+		}
+		default:
+			break;
+		}
+	}
+
 	const unsigned char* buffer;
 	buffer = SDL_GetKeyboardState(NULL);
-	if(buffer != NULL) {
+	if (buffer != NULL)
+	{
 		m_keyStates = buffer;
 	}
 }
 
 bool SdlInput::IsKeyDown(int key)
 {
-	if(m_keyStates[static_cast<int>(key)] == 1)
+	if (m_keyStates == nullptr)
 	{
-		return true;
+		return false;
 	}
-	
-	return false;
+
+	if (key < 0 || key >= static_cast<int>(EKey::EKEY_MAX))
+	{
+		return false;
+	}
+
+	return m_keyStates[static_cast<unsigned char>(keys[key])];
 }
 
 bool SdlInput::IsButtonDown(int button)
 {
-	return false;
+	if (button < 0 || button >= 3)
+	{
+		return false;
+	}
+
+	return m_mouseButtonStates[button];
 }
 
 void SdlInput::GetMousePosition(int* x, int* y)
 {
-
+	// Dans update pourtant....
 }

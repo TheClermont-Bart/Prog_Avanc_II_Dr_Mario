@@ -1,6 +1,9 @@
 #pragma once
 #include "IGfx.h"
 #include "IInput.h"
+#include "ILogger.h"
+
+class SdlInput;
 
 namespace homer {
 	class Engine final {
@@ -21,16 +24,19 @@ namespace homer {
 		void ProcessInput();
 		void Update(float dt);
 		void Render();
-		void Shutdown();
-		void Exit();
 	private:
-		IGfx* m_gfx;
+		IGfx* m_gfx = nullptr;
 		IInput* m_input = nullptr;
+		ILogger* m_logger = nullptr;
 		bool m_isRunning = false;
 		bool m_isInit = false;
 		float m_rectX = 0.0f;
 		float m_rectY = 0.0f;
 		float m_rectSpeed = 100.0f;
 		float m_deltaTime = 0.0f;
+	protected:
+		friend class SdlInput;
+		void Shutdown();
+		void Exit();
 	};
 }
