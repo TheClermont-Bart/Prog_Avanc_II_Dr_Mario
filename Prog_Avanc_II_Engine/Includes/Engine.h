@@ -28,6 +28,7 @@ namespace homer {
 		IGfx* m_gfx = nullptr;
 		IInput* m_input = nullptr;
 		ILogger* m_logger = nullptr;
+		ILogger* m_filelog = nullptr;
 		bool m_isRunning = false;
 		bool m_isInit = false;
 		float m_rectX = 0.0f;

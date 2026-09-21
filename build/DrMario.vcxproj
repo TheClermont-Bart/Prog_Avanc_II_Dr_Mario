@@ -27,7 +27,7 @@
 		</ProjectConfiguration>
 	</ItemGroup>
 	<PropertyGroup Label="Globals">
-		<ProjectGuid>{172bcb06-b663-4687-8135-eb8292f9ab92}</ProjectGuid>
+		<ProjectGuid>{cc254a7a-0516-4aa5-a997-0966f479ee07}</ProjectGuid>
 		<VCProjectVersion>17.0</VCProjectVersion>
 		<WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
 	</PropertyGroup>
@@ -220,6 +220,7 @@
 	<ItemGroup>
 		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\Console_Log.h" />
 		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\Engine.h" />
+		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\File_Log.h" />
 		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\IGfx.h" />
 		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\IInput.h" />
 		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\ILogger.h" />
@@ -232,6 +233,8 @@
 		<ClCompile Include="..\Prog_Avanc_II_Engine\Sources\Console_Log.cpp">
 		</ClCompile>
 		<ClCompile Include="..\Prog_Avanc_II_Engine\Sources\Engine.cpp">
+		</ClCompile>
+		<ClCompile Include="..\Prog_Avanc_II_Engine\Sources\File_Log.cpp">
 		</ClCompile>
 		<ClCompile Include="..\Prog_Avanc_II_Engine\Sources\SDLGfx.cpp">
 		</ClCompile>

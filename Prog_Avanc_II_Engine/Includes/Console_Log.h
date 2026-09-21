@@ -1,8 +1,6 @@
 #pragma once
 #include "ILogger.h"
 
-class SdlInput;
-
 class Console_Log final : public ILogger
 {
 public:

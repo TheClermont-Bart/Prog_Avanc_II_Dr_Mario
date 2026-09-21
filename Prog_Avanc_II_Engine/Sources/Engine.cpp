@@ -2,6 +2,7 @@
 #include "SDLGfx.h"
 #include "SdlInput.h"
 #include "Console_Log.h"	
+#include "File_Log.h"
 #include <Windows.h>
 #include <ctime>
 
@@ -10,6 +11,7 @@ bool homer::Engine::Init(const char* title, int width, int height)
 	m_gfx = new SDLGfx();
 	m_input = new SdlInput();
 	m_logger = new Console_Log();
+	m_filelog = new File_Log();
 
 	if (!m_gfx->Init(title, width, height))
 	{
@@ -57,23 +59,6 @@ void homer::Engine::Start()
 void homer::Engine::ProcessInput()
 {
 	m_input->Update();
-
-	for (int i = static_cast<int>(EKey::EKEY_A); i <= static_cast<int>(EKey::EKEY_MAX); ++i)
-	{
-		if (m_input->IsKeyDown(i))
-		{
-			std::string key(1, static_cast<char>('A' + i));
-			m_logger->Log("Touche : " + key);
-		}
-	}
-
-	for (int i = 1; i < 3; ++i)
-	{
-		if (m_input->IsButtonDown(i))
-		{
-			m_logger->Log("Mouse button " + std::to_string(i));
-		}
-	}
 }
 
 void homer::Engine::Update(float dt)
@@ -81,11 +66,15 @@ void homer::Engine::Update(float dt)
 	if (m_input->IsKeyDown(static_cast<int>(EKey::EKEY_W)))
 	{
 		m_rectY -= m_rectSpeed * dt;
+		m_logger->Log("W key is pressed");
+		m_filelog->Log("W key is pressed");
 	}
 
 	if (m_input->IsKeyDown(static_cast<int>(EKey::EKEY_S)))
 	{
 		m_rectY += m_rectSpeed * dt;
+		m_logger->Log("S key is pressed");
+		m_filelog->Log("S key is pressed");
 	}
 
 	if (m_input->IsKeyDown(static_cast<int>(EKey::EKEY_A)))

@@ -17,6 +17,7 @@ set(SOURCE_FILES
   "C:/Users/ocler/Documents/Ecole/Prog_Avanc_II_Dr_Mario/Prog_Avanc_II_DrMario/Sources/main.cpp"
   "C:/Users/ocler/Documents/Ecole/Prog_Avanc_II_Dr_Mario/Prog_Avanc_II_Engine/Includes/Console_Log.h"
   "C:/Users/ocler/Documents/Ecole/Prog_Avanc_II_Dr_Mario/Prog_Avanc_II_Engine/Includes/Engine.h"
+  "C:/Users/ocler/Documents/Ecole/Prog_Avanc_II_Dr_Mario/Prog_Avanc_II_Engine/Includes/File_Log.h"
   "C:/Users/ocler/Documents/Ecole/Prog_Avanc_II_Dr_Mario/Prog_Avanc_II_Engine/Includes/IGfx.h"
   "C:/Users/ocler/Documents/Ecole/Prog_Avanc_II_Dr_Mario/Prog_Avanc_II_Engine/Includes/IInput.h"
   "C:/Users/ocler/Documents/Ecole/Prog_Avanc_II_Dr_Mario/Prog_Avanc_II_Engine/Includes/ILogger.h"
@@ -24,6 +25,7 @@ set(SOURCE_FILES
   "C:/Users/ocler/Documents/Ecole/Prog_Avanc_II_Dr_Mario/Prog_Avanc_II_Engine/Includes/SdlInput.h"
   "C:/Users/ocler/Documents/Ecole/Prog_Avanc_II_Dr_Mario/Prog_Avanc_II_Engine/Sources/Console_Log.cpp"
   "C:/Users/ocler/Documents/Ecole/Prog_Avanc_II_Dr_Mario/Prog_Avanc_II_Engine/Sources/Engine.cpp"
+  "C:/Users/ocler/Documents/Ecole/Prog_Avanc_II_Dr_Mario/Prog_Avanc_II_Engine/Sources/File_Log.cpp"
   "C:/Users/ocler/Documents/Ecole/Prog_Avanc_II_Dr_Mario/Prog_Avanc_II_Engine/Sources/SDLGfx.cpp"
   "C:/Users/ocler/Documents/Ecole/Prog_Avanc_II_Dr_Mario/Prog_Avanc_II_Engine/Sources/SdlInput.cpp"
 )

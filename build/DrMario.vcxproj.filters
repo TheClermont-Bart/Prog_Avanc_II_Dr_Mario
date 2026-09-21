@@ -2,19 +2,19 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
 		<Filter Include="Prog_Avanc_II_DrMario">
-			<UniqueIdentifier>{C338E798-67FB-4CEF-BA8C-C12F2A42850A}</UniqueIdentifier>
+			<UniqueIdentifier>{19B40618-CE0A-48F1-A24F-A354BD727AF5}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Prog_Avanc_II_DrMario\Sources">
-			<UniqueIdentifier>{592803A5-7FD4-46E5-A3F2-EF0082C1585A}</UniqueIdentifier>
+			<UniqueIdentifier>{BA72E7D7-D5F6-4CB5-A089-6CE4EBF0EC76}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Prog_Avanc_II_Engine">
-			<UniqueIdentifier>{4B64F9DA-3EAD-47FB-B972-768E5BD49B59}</UniqueIdentifier>
+			<UniqueIdentifier>{CB2696FD-6FFC-4994-A685-0581DA613D6C}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Prog_Avanc_II_Engine\Includes">
-			<UniqueIdentifier>{B40C4B18-9255-4457-B015-BF9F4B49E333}</UniqueIdentifier>
+			<UniqueIdentifier>{708DBC0B-E84F-43C9-85DE-8F13E301BF32}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Prog_Avanc_II_Engine\Sources">
-			<UniqueIdentifier>{DC4B1372-D0CA-4569-A5F5-F36C338A4B1A}</UniqueIdentifier>
+			<UniqueIdentifier>{F708C15B-E7A5-4892-8CB3-99B32AF916E8}</UniqueIdentifier>
 		</Filter>
 	</ItemGroup>
 	<ItemGroup>
@@ -22,6 +22,9 @@
 			<Filter>Prog_Avanc_II_Engine\Includes</Filter>
 		</ClInclude>
 		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\Engine.h">
+			<Filter>Prog_Avanc_II_Engine\Includes</Filter>
+		</ClInclude>
+		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\File_Log.h">
 			<Filter>Prog_Avanc_II_Engine\Includes</Filter>
 		</ClInclude>
 		<ClInclude Include="..\Prog_Avanc_II_Engine\Includes\IGfx.h">
@@ -48,6 +51,9 @@
 			<Filter>Prog_Avanc_II_Engine\Sources</Filter>
 		</ClCompile>
 		<ClCompile Include="..\Prog_Avanc_II_Engine\Sources\Engine.cpp">
+			<Filter>Prog_Avanc_II_Engine\Sources</Filter>
+		</ClCompile>
+		<ClCompile Include="..\Prog_Avanc_II_Engine\Sources\File_Log.cpp">
 			<Filter>Prog_Avanc_II_Engine\Sources</Filter>
 		</ClCompile>
 		<ClCompile Include="..\Prog_Avanc_II_Engine\Sources\SDLGfx.cpp">
