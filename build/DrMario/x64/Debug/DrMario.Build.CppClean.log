@@ -1,23 +1,12 @@
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\sdlgfx.obj
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\sdlinput.obj
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\main.obj
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\console_log.obj
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\engine.obj
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\file_log.obj
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\vc143.pdb
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\vc143.idb
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\x64\debug\drmario.exe
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\x64\debug\drmario.pdb
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\resources.res
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\drmario.ilk
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\drmario.tlog\cl.command.1.tlog
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\drmario.tlog\cl.items.tlog
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\drmario.tlog\cl.read.1.tlog
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\drmario.tlog\cl.write.1.tlog
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\drmario.tlog\link.command.1.tlog
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\drmario.tlog\link.read.1.tlog
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\drmario.tlog\link.secondary.1.tlog
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\drmario.tlog\link.write.1.tlog
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\drmario.tlog\rc.command.1.tlog
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\drmario.tlog\rc.read.1.tlog
-c:\users\ocler\documents\ecole\prog_avanc_ii_dr_mario\build\drmario\x64\debug\drmario.tlog\rc.write.1.tlog
+d:\olivier clermont\programmation avancee ii\homer\build\drmario\x64\debug\file_log.obj
+d:\olivier clermont\programmation avancee ii\homer\build\drmario\x64\debug\console_log.obj
+d:\olivier clermont\programmation avancee ii\homer\build\drmario\x64\debug\sdlgfx.obj
+d:\olivier clermont\programmation avancee ii\homer\build\drmario\x64\debug\sdlinput.obj
+d:\olivier clermont\programmation avancee ii\homer\build\drmario\x64\debug\main.obj
+d:\olivier clermont\programmation avancee ii\homer\build\drmario\x64\debug\igfx.obj
+d:\olivier clermont\programmation avancee ii\homer\build\drmario\x64\debug\engine.obj
+d:\olivier clermont\programmation avancee ii\homer\build\drmario\x64\debug\vc143.idb
+d:\olivier clermont\programmation avancee ii\homer\build\drmario\x64\debug\vc143.pdb
+d:\olivier clermont\programmation avancee ii\homer\build\drmario\x64\debug\drmario.tlog\cl.10300.write.1.tlog
+d:\olivier clermont\programmation avancee ii\homer\build\drmario\x64\debug\drmario.tlog\cl.command.1.tlog
+d:\olivier clermont\programmation avancee ii\homer\build\drmario\x64\debug\drmario.tlog\cl.read.1.tlog

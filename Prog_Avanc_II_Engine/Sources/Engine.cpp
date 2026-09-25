@@ -1,17 +1,26 @@
 #include "Engine.h"
 #include "SDLGfx.h"
 #include "SdlInput.h"
-#include "Console_Log.h"	
-#include "File_Log.h"
 #include <Windows.h>
 #include <ctime>
+
+#ifdef _DEBUG
+#include "Console_Log.h"
+#else
+#include "File_Log.h"
+#endif 
+
 
 bool homer::Engine::Init(const char* title, int width, int height)
 {
 	m_gfx = new SDLGfx();
 	m_input = new SdlInput();
-	m_logger = new Console_Log();
-	m_filelog = new File_Log();
+
+	#ifdef _DEBUG
+		m_logger = new Console_Log();
+	#else
+		m_logger = new File_Log();
+	#endif 
 
 	if (!m_gfx->Init(title, width, height))
 	{
@@ -66,15 +75,11 @@ void homer::Engine::Update(float dt)
 	if (m_input->IsKeyDown(static_cast<int>(EKey::EKEY_W)))
 	{
 		m_rectY -= m_rectSpeed * dt;
-		m_logger->Log("W key is pressed");
-		m_filelog->Log("W key is pressed");
 	}
 
 	if (m_input->IsKeyDown(static_cast<int>(EKey::EKEY_S)))
 	{
 		m_rectY += m_rectSpeed * dt;
-		m_logger->Log("S key is pressed");
-		m_filelog->Log("S key is pressed");
 	}
 
 	if (m_input->IsKeyDown(static_cast<int>(EKey::EKEY_A)))

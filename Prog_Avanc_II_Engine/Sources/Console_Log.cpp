@@ -1,4 +1,3 @@
-#include "SDL.h"
 #include "Console_Log.h"
 #include <Windows.h>
 #include <iostream>

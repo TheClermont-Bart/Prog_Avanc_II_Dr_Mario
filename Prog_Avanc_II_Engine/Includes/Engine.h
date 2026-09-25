@@ -19,6 +19,7 @@ namespace homer {
 		void Start();
 		IGfx* Gfx() { return m_gfx; }; // A faire pour ISFX
 		IInput* Input() { return m_input; };
+		ILogger* Logger() { return m_logger; };
 	private:
 		Engine() = default;
 		void ProcessInput();
@@ -28,7 +29,6 @@ namespace homer {
 		IGfx* m_gfx = nullptr;
 		IInput* m_input = nullptr;
 		ILogger* m_logger = nullptr;
-		ILogger* m_filelog = nullptr;
 		bool m_isRunning = false;
 		bool m_isInit = false;
 		float m_rectX = 0.0f;
