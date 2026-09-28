@@ -13,7 +13,7 @@
 
 bool homer::Engine::Init(const char* title, int width, int height)
 {
-	m_gfx = new SDLGfx();
+	m_gfx = new SdlGfx();
 	m_input = new SdlInput();
 
 	#ifdef _DEBUG
@@ -98,7 +98,8 @@ void homer::Engine::Render()
 	m_gfx->SetColor({ 0, 0, 0, 255 });
 	m_gfx->Clear();
 
-	m_gfx->DrawRect(m_rectX, m_rectY, 100.0f, 100.0f, { 255, 0, 0, 255 });
+	m_gfx->FillRect(m_rectX, m_rectY, 100.0f, 100.0f, { 255, 0, 0, 255 });
+	m_gfx->DrawLine(100, 100, 400, 100, { 0, 255, 0, 255 });
 
 	m_gfx->Present();
 }

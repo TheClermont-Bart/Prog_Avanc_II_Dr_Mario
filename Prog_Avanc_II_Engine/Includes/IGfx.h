@@ -1,9 +1,10 @@
 #pragma once
 #include <SDL_image.h>
+#include <unordered_map>
 #include <string>
+#include "SDL_ttf.h"
 
 typedef unsigned char uchar;
-
 
 struct RectI
 {
@@ -23,6 +24,7 @@ struct RectF
 
 struct Flip
 {
+	bool n;
 	bool h;
 	bool v;
 };
@@ -41,8 +43,6 @@ public:
 	uchar b = 255;
 	uchar a = 255;
 };
-
-
 
 class IGfx {
 public:

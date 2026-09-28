@@ -16,9 +16,13 @@ project.addProvider = function(proj, isRoot=false){
         proj.addLib("../SDL/lib/SDL2");
         proj.addLib("../SDL/lib/SDL2main");
         proj.addLib("../SDL/lib/SDL2_image");
+        proj.addLib("../SDL/lib/SDL2_ttf");
+        proj.addLib("../SDL/lib/SDL2_mixer");
         proj.addLib(path.resolve(progx86+"/Visual Leak Detector/lib/Win64/vld"));
         fs.copyFileSync("./SDL/lib/SDL2.dll", "./Deployment/SDL2.dll");
         fs.copyFileSync("./SDL/lib/SDL2_image.dll", "./Deployment/SDL2_image.dll");
+        fs.copyFileSync("./SDL/lib/SDL2_ttf.dll", "./Deployment/SDL2_ttf.dll");
+        fs.copyFileSync("./SDL/lib/SDL2_mixer.dll", "./Deployment/SDL2_mixer.dll");
     }
 };
 project.kore = false;

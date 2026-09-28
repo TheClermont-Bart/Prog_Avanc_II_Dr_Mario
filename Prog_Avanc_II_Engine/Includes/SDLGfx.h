@@ -1,10 +1,11 @@
+
 #pragma once
 #include "IGfx.h"
 
 struct SDL_Window;
 struct SDL_Renderer;
 
-class SDLGfx final : public IGfx {
+class SdlGfx final : public IGfx {
 public:
 	virtual int Init(const char* title, int width, int height) override;
 	virtual void Shutdown() override;
@@ -24,9 +25,11 @@ public:
 	virtual size_t LoadFont(const std::string& filename, int fontSize) override;
 	virtual void DrawString(const std::string& text, size_t fontId, float x, float y, const Color& color) override;
 	virtual void GetTextSize(const std::string& text, size_t fontId, int* w, int* h) override;
-	virtual ~SDLGfx() = default;
+	virtual ~SdlGfx() = default;
 private:
 	SDL_Renderer* m_renderer = nullptr;
 	SDL_Window* m_window = nullptr;
+	std::unordered_map<size_t, SDL_Texture*> m_textureCache;
+	std::unordered_map<size_t, TTF_Font*> m_fontCache;
 
 };

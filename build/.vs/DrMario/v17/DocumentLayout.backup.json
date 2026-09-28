@@ -1,39 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\build\\",
+  "WorkspaceRootPath": "C:\\Users\\ocler\\Documents\\Ecole\\Prog_Avanc_II_Dr_Mario\\build\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{02D039FA-1554-4627-9268-4CC0C02D148F}|DrMario.vcxproj|D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\IGfx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{25948650-644A-4D88-81F8-A0D802391528}|DrMario.vcxproj|C:\\Users\\ocler\\Documents\\Ecole\\Prog_Avanc_II_Dr_Mario\\Prog_Avanc_II_Engine\\Sources\\SdlSfx.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78B99177-976E-4964-AD0A-8504147B69F9}|DrMario.vcxproj|D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\IGfx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{504496EC-9787-4ED2-8BE1-46B5C7DF6C25}|DrMario.vcxproj|C:\\Users\\ocler\\Documents\\Ecole\\Prog_Avanc_II_Dr_Mario\\Prog_Avanc_II_Engine\\Sources\\SdlSfx.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02D039FA-1554-4627-9268-4CC0C02D148F}|DrMario.vcxproj|D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\SDLGfx.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{25948650-644A-4D88-81F8-A0D802391528}|DrMario.vcxproj|C:\\Users\\ocler\\Documents\\Ecole\\Prog_Avanc_II_Dr_Mario\\Prog_Avanc_II_Engine\\Sources\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78B99177-976E-4964-AD0A-8504147B69F9}|DrMario.vcxproj|D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\SDLGfx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78B99177-976E-4964-AD0A-8504147B69F9}|DrMario.vcxproj|D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\SdlInput.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78B99177-976E-4964-AD0A-8504147B69F9}|DrMario.vcxproj|D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78B99177-976E-4964-AD0A-8504147B69F9}|DrMario.vcxproj|D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_DrMario\\Sources\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC254A7A-0516-4AA5-A997-0966F479EE07}|DrMario.vcxproj|D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\SDLGfx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC254A7A-0516-4AA5-A997-0966F479EE07}|DrMario.vcxproj|D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\SDLGfx.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC254A7A-0516-4AA5-A997-0966F479EE07}|DrMario.vcxproj|D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC254A7A-0516-4AA5-A997-0966F479EE07}|DrMario.vcxproj|D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{25948650-644A-4D88-81F8-A0D802391528}|DrMario.vcxproj|C:\\Users\\ocler\\Documents\\Ecole\\Prog_Avanc_II_Dr_Mario\\Prog_Avanc_II_Engine\\Includes\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,136 +27,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IGfx.h",
-              "DocumentMoniker": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\IGfx.h",
-              "RelativeDocumentMoniker": "..\\Prog_Avanc_II_Engine\\Includes\\IGfx.h",
-              "ToolTip": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\IGfx.h",
-              "RelativeToolTip": "..\\Prog_Avanc_II_Engine\\Includes\\IGfx.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-25T19:14:55.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SdlInput.cpp",
-              "DocumentMoniker": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\SdlInput.cpp",
-              "RelativeDocumentMoniker": "..\\Prog_Avanc_II_Engine\\Sources\\SdlInput.cpp",
-              "ToolTip": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\SdlInput.cpp",
-              "RelativeToolTip": "..\\Prog_Avanc_II_Engine\\Sources\\SdlInput.cpp",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAHkAAAABAAAAAAAAAA==",
+              "Title": "SdlSfx.cpp",
+              "DocumentMoniker": "C:\\Users\\ocler\\Documents\\Ecole\\Prog_Avanc_II_Dr_Mario\\Prog_Avanc_II_Engine\\Sources\\SdlSfx.cpp",
+              "RelativeDocumentMoniker": "..\\Prog_Avanc_II_Engine\\Sources\\SdlSfx.cpp",
+              "ToolTip": "C:\\Users\\ocler\\Documents\\Ecole\\Prog_Avanc_II_Dr_Mario\\Prog_Avanc_II_Engine\\Sources\\SdlSfx.cpp",
+              "RelativeToolTip": "..\\Prog_Avanc_II_Engine\\Sources\\SdlSfx.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-25T19:04:20.573Z"
+              "WhenOpened": "2026-09-27T16:39:21.704Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IGfx.h",
-              "DocumentMoniker": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\IGfx.h",
-              "RelativeDocumentMoniker": "..\\Prog_Avanc_II_Engine\\Includes\\IGfx.h",
-              "ToolTip": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\IGfx.h",
-              "RelativeToolTip": "..\\Prog_Avanc_II_Engine\\Includes\\IGfx.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-25T17:47:44.596Z"
+              "Title": "SdlSfx.cpp",
+              "DocumentMoniker": "C:\\Users\\ocler\\Documents\\Ecole\\Prog_Avanc_II_Dr_Mario\\Prog_Avanc_II_Engine\\Sources\\SdlSfx.cpp",
+              "RelativeDocumentMoniker": "..\\Prog_Avanc_II_Engine\\Sources\\SdlSfx.cpp",
+              "ToolTip": "C:\\Users\\ocler\\Documents\\Ecole\\Prog_Avanc_II_Dr_Mario\\Prog_Avanc_II_Engine\\Sources\\SdlSfx.cpp",
+              "RelativeToolTip": "..\\Prog_Avanc_II_Engine\\Sources\\SdlSfx.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-27T14:24:51.389Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SDLGfx.h",
-              "DocumentMoniker": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\SDLGfx.h",
-              "RelativeDocumentMoniker": "..\\Prog_Avanc_II_Engine\\Includes\\SDLGfx.h",
-              "ToolTip": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\SDLGfx.h",
-              "RelativeToolTip": "..\\Prog_Avanc_II_Engine\\Includes\\SDLGfx.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAwA8AAABYAAAAAAAAAA==",
+              "Title": "Engine.h",
+              "DocumentMoniker": "C:\\Users\\ocler\\Documents\\Ecole\\Prog_Avanc_II_Dr_Mario\\Prog_Avanc_II_Engine\\Includes\\Engine.h",
+              "RelativeDocumentMoniker": "..\\Prog_Avanc_II_Engine\\Includes\\Engine.h",
+              "ToolTip": "C:\\Users\\ocler\\Documents\\Ecole\\Prog_Avanc_II_Dr_Mario\\Prog_Avanc_II_Engine\\Includes\\Engine.h",
+              "RelativeToolTip": "..\\Prog_Avanc_II_Engine\\Includes\\Engine.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-25T17:47:08.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SDLGfx.cpp",
-              "DocumentMoniker": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\SDLGfx.cpp",
-              "RelativeDocumentMoniker": "..\\Prog_Avanc_II_Engine\\Sources\\SDLGfx.cpp",
-              "ToolTip": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\SDLGfx.cpp",
-              "RelativeToolTip": "..\\Prog_Avanc_II_Engine\\Sources\\SDLGfx.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-25T17:36:34.941Z",
+              "WhenOpened": "2026-09-27T16:35:19.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "main.cpp",
-              "DocumentMoniker": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_DrMario\\Sources\\main.cpp",
-              "RelativeDocumentMoniker": "..\\Prog_Avanc_II_DrMario\\Sources\\main.cpp",
-              "ToolTip": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_DrMario\\Sources\\main.cpp",
-              "RelativeToolTip": "..\\Prog_Avanc_II_DrMario\\Sources\\main.cpp",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAlwBIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-25T17:36:27.397Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Engine.cpp",
-              "DocumentMoniker": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\Engine.cpp",
+              "DocumentMoniker": "C:\\Users\\ocler\\Documents\\Ecole\\Prog_Avanc_II_Dr_Mario\\Prog_Avanc_II_Engine\\Sources\\Engine.cpp",
               "RelativeDocumentMoniker": "..\\Prog_Avanc_II_Engine\\Sources\\Engine.cpp",
-              "ToolTip": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\Engine.cpp",
+              "ToolTip": "C:\\Users\\ocler\\Documents\\Ecole\\Prog_Avanc_II_Dr_Mario\\Prog_Avanc_II_Engine\\Sources\\Engine.cpp",
               "RelativeToolTip": "..\\Prog_Avanc_II_Engine\\Sources\\Engine.cpp",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAcwGsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-25T17:31:04.636Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SDLGfx.h",
-              "DocumentMoniker": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\SDLGfx.h",
-              "RelativeDocumentMoniker": "..\\Prog_Avanc_II_Engine\\Includes\\SDLGfx.h",
-              "ToolTip": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\SDLGfx.h",
-              "RelativeToolTip": "..\\Prog_Avanc_II_Engine\\Includes\\SDLGfx.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-25T17:18:02.494Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SDLGfx.cpp",
-              "DocumentMoniker": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\SDLGfx.cpp",
-              "RelativeDocumentMoniker": "..\\Prog_Avanc_II_Engine\\Sources\\SDLGfx.cpp",
-              "ToolTip": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\SDLGfx.cpp",
-              "RelativeToolTip": "..\\Prog_Avanc_II_Engine\\Sources\\SDLGfx.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-25T17:14:32.393Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Engine.h",
-              "DocumentMoniker": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\Engine.h",
-              "RelativeDocumentMoniker": "..\\Prog_Avanc_II_Engine\\Includes\\Engine.h",
-              "ToolTip": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Includes\\Engine.h",
-              "RelativeToolTip": "..\\Prog_Avanc_II_Engine\\Includes\\Engine.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-25T17:13:33.495Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Engine.cpp",
-              "DocumentMoniker": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\Engine.cpp",
-              "RelativeDocumentMoniker": "..\\Prog_Avanc_II_Engine\\Sources\\Engine.cpp",
-              "ToolTip": "D:\\Olivier Clermont\\Programmation Avancee II\\Homer\\Prog_Avanc_II_Engine\\Sources\\Engine.cpp",
-              "RelativeToolTip": "..\\Prog_Avanc_II_Engine\\Sources\\Engine.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-25T17:08:19.263Z"
+              "WhenOpened": "2026-09-27T16:34:50.147Z",
+              "EditorCaption": ""
             }
           ]
         }

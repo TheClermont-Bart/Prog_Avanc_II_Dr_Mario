@@ -2,19 +2,19 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Prog_Avanc_II_DrMario">
-      <UniqueIdentifier>{B420E269-C6C9-4E52-A317-60DE175BE5D8}</UniqueIdentifier>
+      <UniqueIdentifier>{A0B3A754-CF59-47E3-BF07-1632EAA1D4F5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Prog_Avanc_II_DrMario\Sources">
-      <UniqueIdentifier>{5CFBD43D-3E9A-4A49-8869-B60F3A1162CC}</UniqueIdentifier>
+      <UniqueIdentifier>{8037C6E7-6444-4916-B1DC-4EB109C9A3E3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Prog_Avanc_II_Engine">
-      <UniqueIdentifier>{AFAE3E33-66A9-4D83-959D-4048D4191B4E}</UniqueIdentifier>
+      <UniqueIdentifier>{8C481E31-4600-4F26-850F-3D75D5F97ADC}</UniqueIdentifier>
     </Filter>
     <Filter Include="Prog_Avanc_II_Engine\Includes">
-      <UniqueIdentifier>{49BBD19F-0B22-4E45-B222-A9790A5484AC}</UniqueIdentifier>
+      <UniqueIdentifier>{CD189AB7-930D-4B94-9E02-E6F1E3097B6C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Prog_Avanc_II_Engine\Sources">
-      <UniqueIdentifier>{7301FC3B-DD53-4ADE-8682-01DE394BF903}</UniqueIdentifier>
+      <UniqueIdentifier>{A49642D4-9EAA-4EC3-BA90-52DCA9CE538C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -36,10 +36,16 @@
     <ClInclude Include="..\Prog_Avanc_II_Engine\Includes\ILogger.h">
       <Filter>Prog_Avanc_II_Engine\Includes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Prog_Avanc_II_Engine\Includes\SDLGfx.h">
+    <ClInclude Include="..\Prog_Avanc_II_Engine\Includes\ISfx.h">
+      <Filter>Prog_Avanc_II_Engine\Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Prog_Avanc_II_Engine\Includes\SdlGfx.h">
       <Filter>Prog_Avanc_II_Engine\Includes</Filter>
     </ClInclude>
     <ClInclude Include="..\Prog_Avanc_II_Engine\Includes\SdlInput.h">
+      <Filter>Prog_Avanc_II_Engine\Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Prog_Avanc_II_Engine\Includes\SdlSfx.h">
       <Filter>Prog_Avanc_II_Engine\Includes</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,10 +62,13 @@
     <ClCompile Include="..\Prog_Avanc_II_Engine\Sources\File_Log.cpp">
       <Filter>Prog_Avanc_II_Engine\Sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\Prog_Avanc_II_Engine\Sources\SDLGfx.cpp">
+    <ClCompile Include="..\Prog_Avanc_II_Engine\Sources\SdlGfx.cpp">
       <Filter>Prog_Avanc_II_Engine\Sources</Filter>
     </ClCompile>
     <ClCompile Include="..\Prog_Avanc_II_Engine\Sources\SdlInput.cpp">
+      <Filter>Prog_Avanc_II_Engine\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Prog_Avanc_II_Engine\Sources\SdlSfx.cpp">
       <Filter>Prog_Avanc_II_Engine\Sources</Filter>
     </ClCompile>
   </ItemGroup>

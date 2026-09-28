@@ -17,7 +17,7 @@ namespace homer {
 		}
 		bool Init(const char* title, int width, int height);
 		void Start();
-		IGfx* Gfx() { return m_gfx; }; // A faire pour ISFX
+		IGfx* Gfx() { return m_gfx; };
 		IInput* Input() { return m_input; };
 		ILogger* Logger() { return m_logger; };
 	private:
