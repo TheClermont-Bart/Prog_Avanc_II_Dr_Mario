@@ -1,5 +1,6 @@
 #pragma once
 #include "IGfx.h"
+#include "ISfx.h"
 #include "IInput.h"
 #include "ILogger.h"
 
@@ -29,6 +30,9 @@ namespace homer {
 		IGfx* m_gfx = nullptr;
 		IInput* m_input = nullptr;
 		ILogger* m_logger = nullptr;
+		ISfx* m_sound = nullptr;
+		size_t background;
+		size_t music_background;
 		bool m_isRunning = false;
 		bool m_isInit = false;
 		float m_rectX = 0.0f;

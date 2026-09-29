@@ -9,10 +9,17 @@ size_t SdlSfx::LoadMusic(const std::string& filename)
         return _musicId;
     }
 
-    Mix_Music* sample = Mix_LoadMUS(filename.c_str());
+    char* base = SDL_GetBasePath();
+    const char* path = filename.c_str();
+
+    std::string full = std::string(base) + filename;
+    SDL_free(base);
+
+    Mix_Music* sample = Mix_LoadMUS(full.c_str());
 
     if (sample != nullptr)
     {
+        m_musicCache[_musicId] = sample;
         return _musicId;
     }
 
@@ -32,6 +39,7 @@ size_t SdlSfx::LoadSound(const std::string& filename)
 
     if (sample != nullptr)
     {
+        m_soundCache[_audioId] = sample;
         return _audioId;
     }
 

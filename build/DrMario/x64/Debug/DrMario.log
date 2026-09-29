@@ -2,4 +2,5 @@
   Engine.cpp
   SdlGfx.cpp
   SdlInput.cpp
+  SdlSfx.cpp
   DrMario.vcxproj -> C:\Users\ocler\Documents\Ecole\Prog_Avanc_II_Dr_Mario\build\x64\Debug\DrMario.exe

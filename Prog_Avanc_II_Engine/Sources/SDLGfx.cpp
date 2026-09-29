@@ -10,8 +10,6 @@ const Color& Color::Blue = Color(0, 0, 255, 255);
 int SdlGfx::Init(const char* title, int width, int height)
 {
 	ILogger* log = homer::Engine::Get()->Logger();
-	IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG);
-	TTF_Init();
 
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
 		log->Log(SDL_GetError());
@@ -33,6 +31,9 @@ int SdlGfx::Init(const char* title, int width, int height)
 		log->Log(SDL_GetError());
 		return false;
 	}
+
+	IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG);
+	TTF_Init();
 
 	return true;
 }
@@ -102,10 +103,20 @@ size_t SdlGfx::LoadTexture(const std::string& filename)
 		return _textureId;
 	}
 
-	SDL_Surface* loadSurface = IMG_Load(filename.c_str());
+	char* base = SDL_GetBasePath();
+	const char* path = filename.c_str();
+
+	std::string full = std::string(base) + filename;
+	SDL_free(base);
+
+	printf("LE PATH DE BASE EST : %s ", base);
+	printf("LE FILE PATH EST : %s ", path);
+
+	SDL_Surface* loadSurface = IMG_Load(full.c_str());
 
 	if (loadSurface == nullptr)
 	{
+		printf("FAIL TO LOAD");
 		return static_cast<size_t>(-1);
 	}
 
