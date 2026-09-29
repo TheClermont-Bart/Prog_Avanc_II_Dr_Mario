@@ -1,6 +1,6 @@
-
 #pragma once
 #include "IGfx.h"
+#include "ILogger.h"
 
 struct SDL_Window;
 struct SDL_Renderer;
@@ -29,6 +29,7 @@ public:
 private:
 	SDL_Renderer* m_renderer = nullptr;
 	SDL_Window* m_window = nullptr;
+	ILogger* log = nullptr;
 	std::unordered_map<size_t, SDL_Texture*> m_textureCache;
 	std::unordered_map<size_t, TTF_Font*> m_fontCache;
 

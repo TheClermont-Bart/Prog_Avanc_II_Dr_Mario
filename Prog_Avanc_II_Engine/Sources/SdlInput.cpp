@@ -120,5 +120,12 @@ bool SdlInput::IsButtonDown(int button)
 
 void SdlInput::GetMousePosition(int* x, int* y)
 {
-	// Dans update pourtant....
+	if (x != nullptr)
+	{
+		*x = m_mouseX;
+	}
+	if (y != nullptr)
+	{
+		*y = m_mouseY;
+	}
 }

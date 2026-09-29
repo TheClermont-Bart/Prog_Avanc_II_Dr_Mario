@@ -8,5 +8,5 @@ public:
 	File_Log();
 	virtual ~File_Log();
 	virtual void Log(std::string text) override;
-	std::ofstream MyFile;
+	std::ofstream fileLog;
 };

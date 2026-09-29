@@ -28,7 +28,6 @@ bool homer::Engine::Init(const char* title, int width, int height)
 		Shutdown();
 		return false;
 	}
-	
 
 	m_isInit = true;
 	return m_isInit;
@@ -45,14 +44,13 @@ void homer::Engine::Start()
 	}
 
 	m_sound = new SdlSfx();
+	m_musicBackground = m_sound->LoadMusic("standby.mp3");
+	m_sound->PlayMusic(m_musicBackground);
 
 	m_isRunning = true;
 	clock_t _end = clock();
 
-	background = m_gfx->LoadTexture("standby.jpg");
-	music_background = m_sound->LoadMusic("standby.mp3");
-	m_sound->PlayMusic(music_background);
-	
+	m_background = m_gfx->LoadTexture("standby.jpg");
 
 	while (m_isRunning)
 	{
@@ -107,7 +105,7 @@ void homer::Engine::Render()
 	m_gfx->SetColor({ 0, 0, 0, 255 });
 	m_gfx->Clear();
 
-	m_gfx->DrawTexture(background, { 255,255,255,255 });
+	m_gfx->DrawTexture(m_background, { 255,255,255,255 });
 	
 	m_gfx->FillRect(m_rectX, m_rectY, 100.0f, 100.0f, { 255, 0, 0, 255 });
 	m_gfx->DrawLine(100, 100, 400, 100, { 0, 255, 0, 255 });

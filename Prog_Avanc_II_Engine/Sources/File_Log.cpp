@@ -5,15 +5,15 @@
 
 File_Log::File_Log()
 {
-	MyFile.open("log.txt");
+	fileLog.open("log.txt");
 }
 
 File_Log::~File_Log()
 {
-	MyFile.close();
+	fileLog.close();
 }
 
 void File_Log::Log(std::string text)
 {
-	MyFile << "Message : " << text << std::endl;
+	fileLog << "Message : " << text << std::endl;
 }
