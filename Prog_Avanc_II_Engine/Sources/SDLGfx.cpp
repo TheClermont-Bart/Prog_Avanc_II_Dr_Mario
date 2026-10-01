@@ -2,10 +2,10 @@
 #include "SDLGfx.h"
 #include "Engine.h"
 
-
 const Color& Color::Red = Color(255, 0, 0, 255);
 const Color& Color::Green = Color(0, 255, 0, 255);
 const Color& Color::Blue = Color(0, 0, 255, 255);
+Color::Color(uchar red, uchar green, uchar blue, uchar alpha) : r(red), g(green), b(blue), a(alpha) {}
 
 int SdlGfx::Init(const char* title, int width, int height)
 {
@@ -38,12 +38,9 @@ int SdlGfx::Init(const char* title, int width, int height)
 	return true;
 }
 
-
-Color::Color(uchar red, uchar green, uchar blue, uchar alpha) : r(red), g(green), b(blue), a(alpha) {}
-
 void SdlGfx::SetColor(const Color& color)
 {
-	SDL_SetRenderDrawColor(m_renderer, color.r, color.g, color.b, color.a); 
+	SDL_SetRenderDrawColor(m_renderer, color.r, color.g, color.b, color.a);
 }
 
 void SdlGfx::Clear()
@@ -63,11 +60,11 @@ void SdlGfx::DrawRect(float x, float y, float w, float h, const Color& color)
 	rect.y = static_cast<int>(y);
 	rect.w = static_cast<int>(w);
 	rect.h = static_cast<int>(h);
-	SDL_SetRenderDrawColor(m_renderer,color.r, color.g, color.b, color.a);
+	SDL_SetRenderDrawColor(m_renderer, color.r, color.g, color.b, color.a);
 	SDL_RenderDrawRect(m_renderer, &rect);
 }
 
-void SdlGfx::DrawRect(const RectF& rect, const Color& color) 
+void SdlGfx::DrawRect(const RectF& rect, const Color& color)
 {
 	DrawRect(rect.x, rect.y, rect.w, rect.h, color);
 };
@@ -96,22 +93,20 @@ void SdlGfx::DrawLine(float x1, float y1, float x2, float y2, const Color& color
 
 size_t SdlGfx::LoadTexture(const std::string& filename)
 {
-	const size_t _textureId = std::hash<std::string>()(filename);
+	const size_t textureId = std::hash<std::string>()(filename);
 
-	if (m_textureCache.find(_textureId) != m_textureCache.end())
+	if (m_textureCache.find(textureId) != m_textureCache.end())
 	{
-		return _textureId;
+		return textureId;
 	}
 
-	char* base = SDL_GetBasePath();
-	const char* path = filename.c_str();
+	char* folder = "./assets/";
 
-	std::string full = std::string(base) + filename;
-	SDL_free(base);
+	std::string fullPath = std::string(folder) + filename;
 
-	log->Log(std::string("LE PATH DE L'IMAGE EST : ") + full);
+	log->Log(std::string("LE PATH DE L'IMAGE EST : ") + fullPath);
 
-	SDL_Surface* loadSurface = IMG_Load(full.c_str());
+	SDL_Surface* loadSurface = IMG_Load(fullPath.c_str());
 
 	if (loadSurface == nullptr)
 	{
@@ -124,8 +119,8 @@ size_t SdlGfx::LoadTexture(const std::string& filename)
 
 	if (texture != nullptr)
 	{
-		m_textureCache[_textureId] = texture;
-		return _textureId;
+		m_textureCache[textureId] = texture;
+		return textureId;
 	}
 
 	return static_cast<size_t>(-1);
@@ -179,8 +174,8 @@ void SdlGfx::DrawTexture(size_t id, const Color& color)
 	GetTexture(id, &w, &h);
 
 	RectF dst;
-	dst.h = static_cast<float>(h);
-	dst.w = static_cast<float>(w);
+	dst.h = h;
+	dst.w = w;
 	dst.x = 0.0f;
 	dst.y = 0.0f;
 
@@ -194,20 +189,20 @@ void SdlGfx::GetTexture(size_t id, int* w, int* h)
 
 size_t SdlGfx::LoadFont(const std::string& filename, int fontSize)
 {
-	const size_t _fontId = std::hash<std::string>()(filename);
+	const size_t fontId = std::hash<std::string>()(filename);
 
 	TTF_OpenFont(filename.c_str(), fontSize);
 
-	if (m_fontCache.find(_fontId) != m_fontCache.end())
+	if (m_fontCache.find(fontId) != m_fontCache.end())
 	{
-		return _fontId;
+		return fontId;
 	}
 
 	TTF_Font* font = TTF_OpenFont(filename.c_str(), fontSize);
 	if (font != nullptr)
 	{
-		m_fontCache[_fontId] = font;
-		return _fontId;
+		m_fontCache[fontId] = font;
+		return fontId;
 	}
 
 	return static_cast<size_t>(-1);
@@ -217,25 +212,25 @@ void SdlGfx::DrawString(const std::string& text, size_t fontId, float x, float y
 {
 	if (m_fontCache.count(fontId) > 0)
 	{
-		TTF_Font* _font = m_fontCache[fontId];
-		SDL_Color _color = { color.r, color.g, color.b, color.a };
-		SDL_Surface* _surface = TTF_RenderText_Solid(_font, text.c_str(), _color);
+		TTF_Font* font = m_fontCache[fontId];
+		SDL_Color color = { color.r, color.g, color.b, color.a };
+		SDL_Surface* surface = TTF_RenderText_Solid(font, text.c_str(), color);
 
-		if (_surface == nullptr)
+		if (surface == nullptr)
 		{
 			return;
 		}
 
-		SDL_Texture* _texture = SDL_CreateTextureFromSurface(m_renderer, _surface);
-		SDL_Rect _dst;
-		_dst.x = static_cast<int>(x);
-		_dst.y = static_cast<int>(y);
-		_dst.w = _surface->w;
-		_dst.h = _surface->h;
+		SDL_Texture* texture = SDL_CreateTextureFromSurface(m_renderer, surface);
+		SDL_Rect dst;
+		dst.x = static_cast<int>(x);
+		dst.y = static_cast<int>(y);
+		dst.w = surface->w;
+		dst.h = surface->h;
 
-		SDL_RenderCopy(m_renderer, _texture, nullptr, &_dst);
-		SDL_DestroyTexture(_texture);
-		SDL_FreeSurface(_surface);
+		SDL_RenderCopy(m_renderer, texture, nullptr, &dst);
+		SDL_DestroyTexture(texture);
+		SDL_FreeSurface(surface);
 	}
 };
 

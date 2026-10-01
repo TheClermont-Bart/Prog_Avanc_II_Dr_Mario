@@ -31,8 +31,8 @@ namespace homer {
 		IInput* m_input = nullptr;
 		ILogger* m_logger = nullptr;
 		ISfx* m_sound = nullptr;
-		size_t m_background;
-		size_t m_musicBackground;
+		size_t m_background = NULL;
+		size_t m_musicBackground = NULL;
 		bool m_isRunning = false;
 		bool m_isInit = false;
 		float m_rectX = 0.0f;

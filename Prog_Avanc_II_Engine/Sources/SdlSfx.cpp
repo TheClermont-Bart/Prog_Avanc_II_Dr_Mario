@@ -2,25 +2,23 @@
 
 size_t SdlSfx::LoadMusic(const std::string& filename)
 {
-    const size_t _musicId = std::hash<std::string>()(filename);
+    const size_t musicId = std::hash<std::string>()(filename);
 
-    if (m_soundCache.find(_musicId) != m_soundCache.end())
+    if (m_soundCache.find(musicId) != m_soundCache.end())
     {
-        return _musicId;
+        return musicId;
     }
 
-    char* base = SDL_GetBasePath();
-    const char* path = filename.c_str();
+    char* folder = "./assets/";
 
-    std::string fullPath = std::string(base) + filename;
-    SDL_free(base);
+    std::string fullPath = std::string(folder) + filename;
 
     Mix_Music* sample = Mix_LoadMUS(fullPath.c_str());
 
     if (sample != nullptr)
     {
-        m_musicCache[_musicId] = sample;
-        return _musicId;
+        m_musicCache[musicId] = sample;
+        return musicId;
     }
 
     return size_t();
@@ -28,25 +26,23 @@ size_t SdlSfx::LoadMusic(const std::string& filename)
 
 size_t SdlSfx::LoadSound(const std::string& filename)
 {
-    const size_t _audioId = std::hash<std::string>()(filename);
+    const size_t audioId = std::hash<std::string>()(filename);
 
-    if (m_soundCache.find(_audioId) != m_soundCache.end())
+    if (m_soundCache.find(audioId) != m_soundCache.end())
     {
-        return _audioId;
+        return audioId;
     }
 
-    char* base = SDL_GetBasePath();
-    const char* path = filename.c_str();
+    char* folder = "./assets/";
 
-    std::string fullPath = std::string(base) + filename;
-    SDL_free(base);
+    std::string fullPath = std::string(folder) + filename;
 
     Mix_Chunk* sample = Mix_LoadWAV(fullPath.c_str());
 
     if (sample != nullptr)
     {
-        m_soundCache[_audioId] = sample;
-        return _audioId;
+        m_soundCache[audioId] = sample;
+        return audioId;
     }
 
     return size_t();
