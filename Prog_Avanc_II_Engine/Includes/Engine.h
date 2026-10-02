@@ -33,6 +33,7 @@ namespace homer {
 		ISfx* m_sound = nullptr;
 		size_t m_background = NULL;
 		size_t m_musicBackground = NULL;
+		size_t m_soundEffect = NULL;
 		bool m_isRunning = false;
 		bool m_isInit = false;
 		float m_rectX = 0.0f;

@@ -1,8 +1,7 @@
 #pragma once
-#include <SDL_image.h>
+
 #include <unordered_map>
 #include <string>
-#include "SDL_ttf.h"
 
 typedef unsigned char uchar;
 
@@ -62,7 +61,20 @@ public:
 	virtual void DrawTexture(size_t id, const RectF& dst, const Color& color) = 0;
 	virtual void DrawTexture(size_t id, const Color& color) = 0;
 	virtual void GetTexture(size_t id, int* w, int* h) = 0;
+	/// <summary>
+	/// Méthode virtuelle pure qui charge une police depuis un fichier et retourne un identifiant représentant la police chargée.
+	/// </summary>
+	/// <param name="filename">Nom ou chemin du fichier de la police à charger.</param>
+	/// <param name="fontSize">Taille de la police à charger (par exemple en points).</param>
+	/// <returns>Un identifiant (size_t) correspondant à la police chargée, à utiliser pour référencer cette police.</returns>
 	virtual size_t LoadFont(const std::string& filename, int fontSize) = 0;
 	virtual void DrawString(const std::string& text, size_t fontId, float x, float y, const Color& color) = 0;
+	/// <summary>
+	/// Méthode virtuelle pure qui calcule la taille en pixels du texte rendu avec la police spécifiée et retourne les dimensions via des paramètres de sortie.
+	/// </summary>
+	/// <param name="text">Chaîne de texte à mesurer.</param>
+	/// <param name="fontId">Identifiant de la police à utiliser pour le rendu.</param>
+	/// <param name="w">Pointeur vers un int qui recevra la largeur en pixels (doit être non nul).</param>
+	/// <param name="h">Pointeur vers un int qui recevra la hauteur en pixels (doit être non nul).</param>
 	virtual void GetTextSize(const std::string& text, size_t fontId, int* w, int* h) = 0;
 };

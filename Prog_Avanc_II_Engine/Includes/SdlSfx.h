@@ -4,8 +4,8 @@
 class SdlSfx final : public ISfx
 {
 public:
-	SdlSfx() { Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024); Mix_Init(MIX_INIT_MP3); };
-	virtual ~SdlSfx() { Mix_CloseAudio(); };
+	SdlSfx();
+	virtual ~SdlSfx();
 	virtual size_t LoadMusic(const std::string& filename) override;
 	virtual size_t LoadSound(const std::string& filename) override;
 	virtual void PlayMusic(size_t id) override;

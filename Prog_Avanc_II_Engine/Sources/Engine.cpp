@@ -45,8 +45,11 @@ void homer::Engine::Start()
 	}
 	
 	m_musicBackground = m_sound->LoadMusic("standby.mp3");
+	m_soundEffect = m_sound->LoadSound("effect.mp3");
 	m_sound->PlayMusic(m_musicBackground);
 	m_background = m_gfx->LoadTexture("standby.jpg");
+
+
 
 	m_isRunning = true;
 	clock_t _end = clock();
@@ -97,6 +100,10 @@ void homer::Engine::Update(float dt)
 	{
 		m_rectX += m_rectSpeed * dt;
 	}
+	if(m_input->IsKeyDown(static_cast<int>(EKey::EKEY_SPACE)))
+	{
+		m_sound->PlaySFX(m_soundEffect);
+	}
 }
 
 void homer::Engine::Render()
@@ -109,6 +116,8 @@ void homer::Engine::Render()
 	m_gfx->FillRect(m_rectX, m_rectY, 100.0f, 100.0f, { 255, 0, 0, 255 });
 
 	m_gfx->DrawLine(100, 100, 400, 100, { 0, 255, 0, 255 });
+
+	
 
 	m_gfx->Present();
 }

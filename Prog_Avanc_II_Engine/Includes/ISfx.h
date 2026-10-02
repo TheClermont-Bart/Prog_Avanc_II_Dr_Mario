@@ -1,8 +1,9 @@
 #pragma once
 #include <string>
-#include "SDL_mixer.h"
-#include "SDL.h"
 #include <unordered_map>
+
+struct _Mix_Music;
+struct Mix_Chunk;
 
 class ISfx
 {
@@ -20,6 +21,6 @@ public:
 	virtual void SetVolume(int volume) = 0;
 	virtual void SetVolume(size_t soundId, int volume) = 0;
 protected:
-	std::unordered_map<size_t, Mix_Music*> m_musicCache;
+	std::unordered_map<size_t, _Mix_Music*> m_musicCache;
 	std::unordered_map<size_t, Mix_Chunk*> m_soundCache;
 };

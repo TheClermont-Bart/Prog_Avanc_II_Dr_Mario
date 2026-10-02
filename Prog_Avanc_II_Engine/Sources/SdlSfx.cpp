@@ -1,4 +1,25 @@
 #include "SdlSfx.h"
+#include "SDL_mixer.h"
+#include "SDL.h"
+
+SdlSfx::SdlSfx()
+{
+    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024);
+    Mix_Init(MIX_INIT_MP3);
+}
+
+SdlSfx::~SdlSfx()
+{
+    for (auto& music : m_musicCache)
+    {
+        Mix_FreeMusic(music.second);
+    }
+    for (auto& sound : m_soundCache)
+    {
+        Mix_FreeChunk(sound.second);
+    }
+    Mix_CloseAudio();
+}
 
 size_t SdlSfx::LoadMusic(const std::string& filename)
 {

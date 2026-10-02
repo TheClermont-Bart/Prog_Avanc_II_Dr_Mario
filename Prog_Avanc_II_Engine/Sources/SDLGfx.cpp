@@ -1,5 +1,7 @@
 #include "SDL.h"
 #include "SDLGfx.h"
+#include "SDL_ttf.h"
+#include <SDL_image.h>
 #include "Engine.h"
 
 const Color& Color::Red = Color(255, 0, 0, 255);
