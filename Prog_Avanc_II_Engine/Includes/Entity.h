@@ -1,11 +1,21 @@
 #pragma once 
+#include <string>
 
-class Entity
+namespace homer
 {
-public :
-    virtual ~Entity() = default;
-	virtual void Start() = 0;
-	virtual void Update(float deltaTime) = 0;
-	virtual void Draw() = 0;
-	virtual void Destroy() = 0;
-};
+	class Entity
+	{
+	public:
+		Entity(const std::string& name) : m_name(name) {};
+		virtual ~Entity() = default;
+
+		virtual void Start() {};
+		virtual void Update(float deltaTime) {};
+		virtual void Draw() {};
+		virtual void Destroy() {};
+
+		std::string& GetName() { return m_name; };
+	private:
+		std::string m_name;
+	};
+}

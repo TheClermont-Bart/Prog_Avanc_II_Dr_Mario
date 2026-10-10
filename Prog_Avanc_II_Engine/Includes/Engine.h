@@ -3,6 +3,7 @@
 #include "ISfx.h"
 #include "IInput.h"
 #include "ILogger.h"
+#include "IWorld.h"
 
 class SdlInput;
 
@@ -21,6 +22,10 @@ namespace homer {
 		IGfx* Gfx() { return m_gfx; };
 		IInput* Input() { return m_input; };
 		ILogger* Logger() { return m_logger; };
+		ISfx* Sound() { return m_sound; };
+		IWorld* World() { return m_world; };
+		int WindowWidth() { return m_windowWidth; };
+		int WindowHeight() { return m_windowHeight; };
 	private:
 		Engine() = default;
 		void ProcessInput();
@@ -31,14 +36,12 @@ namespace homer {
 		IInput* m_input = nullptr;
 		ILogger* m_logger = nullptr;
 		ISfx* m_sound = nullptr;
-		size_t m_background = NULL;
-		size_t m_musicBackground = NULL;
+		IWorld* m_world = nullptr;
 		bool m_isRunning = false;
 		bool m_isInit = false;
-		float m_rectX = 0.0f;
-		float m_rectY = 0.0f;
-		float m_rectSpeed = 100.0f;
 		float m_deltaTime = 0.0f;
+		int m_windowWidth = 0;
+		int m_windowHeight = 0;
 	protected:
 		friend class SdlInput;
 		void Shutdown();

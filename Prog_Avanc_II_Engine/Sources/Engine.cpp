@@ -2,6 +2,7 @@
 #include "SDLGfx.h"
 #include "SdlInput.h"
 #include "SdlSfx.h"
+#include "World.h"
 #include <Windows.h>
 #include <ctime>
 
@@ -17,6 +18,10 @@ bool homer::Engine::Init(const char* title, int width, int height)
 	m_gfx = new SdlGfx();
 	m_input = new SdlInput();
 	m_sound = new SdlSfx();
+	m_world = new homer::World();
+
+	m_windowHeight = height;
+	m_windowWidth = width;
 
 	#ifdef _DEBUG
 		m_logger = new Console_Log();
@@ -43,10 +48,6 @@ void homer::Engine::Start()
 			return;
 		}
 	}
-	
-	m_musicBackground = m_sound->LoadMusic("standby.mp3");
-	m_sound->PlayMusic(m_musicBackground);
-	m_background = m_gfx->LoadTexture("standby.jpg");
 
 	m_isRunning = true;
 	clock_t _end = clock();
@@ -78,25 +79,7 @@ void homer::Engine::ProcessInput()
 
 void homer::Engine::Update(float dt)
 {
-	if (m_input->IsKeyDown(static_cast<int>(EKey::EKEY_W)))
-	{
-		m_rectY -= m_rectSpeed * dt;
-	}
-
-	if (m_input->IsKeyDown(static_cast<int>(EKey::EKEY_S)))
-	{
-		m_rectY += m_rectSpeed * dt;
-	}
-
-	if (m_input->IsKeyDown(static_cast<int>(EKey::EKEY_A)))
-	{
-		m_rectX -= m_rectSpeed * dt;
-	}
-
-	if (m_input->IsKeyDown(static_cast<int>(EKey::EKEY_D)))
-	{
-		m_rectX += m_rectSpeed * dt;
-	}
+	m_world->Update(dt);
 }
 
 void homer::Engine::Render()
@@ -104,17 +87,19 @@ void homer::Engine::Render()
 	m_gfx->SetColor({ 0, 0, 0, 255 });
 	m_gfx->Clear();
 
-	m_gfx->DrawTexture(m_background, { 255,255,255,255 });
-	
-	m_gfx->FillRect(m_rectX, m_rectY, 100.0f, 100.0f, { 255, 0, 0, 255 });
-
-	m_gfx->DrawLine(100, 100, 400, 100, { 0, 255, 0, 255 });
+	m_world->Draw();
 
 	m_gfx->Present();
 }
 
 void homer::Engine::Shutdown()
 {
+	if (m_world != nullptr)
+	{
+		delete m_world;
+		m_world = nullptr;
+	}
+
 	m_gfx->Shutdown();
 
 	if (m_input != nullptr)
@@ -140,6 +125,7 @@ void homer::Engine::Shutdown()
 		delete m_sound;
 		m_sound = nullptr;
 	}
+
 }
 
 void homer::Engine::Exit()
