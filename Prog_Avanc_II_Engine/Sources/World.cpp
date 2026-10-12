@@ -3,9 +3,9 @@
 homer::World::~World()
 {
 	Unload();
-	for (auto& pair : m_scenes)
+	for (auto scene : m_scenes)
 	{
-		delete pair.second;
+		delete scene.second;
 	}
 	m_scenes.clear();
 }
