@@ -10,11 +10,11 @@ homer::World::~World()
 	m_scenes.clear();
 }
 
-void homer::World::AddEntity(Entity* entity)
+homer::Entity* homer::World::AddEntity(const std::string & name)
 {
-	m_entityInWorld.emplace_back(entity);
-	m_entityMap.emplace(entity->GetName(), entity);
-	entity->Start();
+	Entity* entity = new Entity(name);
+	
+	return entity;
 }
 
 void homer::World::RemoveEntity(Entity* entity)

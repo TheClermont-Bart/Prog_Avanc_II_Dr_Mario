@@ -5,12 +5,12 @@ void Bullet::Update(float deltaTime)
 {
 	m_rectX += m_rectSpeed * deltaTime;
 
-	if(m_rectX > homer::Engine::Get()->WindowWidth())
+	if (m_rectX > homer::Engine::Get()->WindowWidth() || m_rectX <= 0)
 	{
 		homer::Engine::Get()->World()->RemoveEntity(this);
 	}
 
-	if(m_rectY > homer::Engine::Get()->WindowHeight())
+	if (m_rectY > homer::Engine::Get()->WindowHeight() || m_rectY <= 0)
 	{
 		homer::Engine::Get()->World()->RemoveEntity(this);
 	}

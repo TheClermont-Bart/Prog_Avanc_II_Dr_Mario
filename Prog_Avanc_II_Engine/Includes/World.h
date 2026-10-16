@@ -9,13 +9,14 @@ namespace homer
 	{
 	public:
 		virtual ~World();
-		virtual void AddEntity(Entity* entity) override;
+		virtual Entity* AddEntity(const std::string& name) override;
 		virtual void RemoveEntity(Entity* entity) override;
 		virtual Entity* FindEntity(const char* name) override;
 		virtual void Register(const std::string& name, IScene* scene) override;
 		virtual void Load(const std::string& scene) override;
 		virtual void Update(float deltaTime) override;
 		virtual void Draw() override;
+
 	private:
 		void Unload();
 		std::vector<Entity*> m_entityInWorld;
