@@ -1,14 +1,15 @@
 #pragma once
-#include "Entity.h"
 
+namespace homer {
+	class Entity;
+}
 
 class Component 
 {
 public:
 	virtual ~Component() = default;
-	Component();
-	Component(homer::Entity* parent);
-
+	Component() = default;
+	Component(homer::Entity* parent) : m_Entity(parent) {}
 
 	virtual void Start() {}
 	virtual void Destroy() {}

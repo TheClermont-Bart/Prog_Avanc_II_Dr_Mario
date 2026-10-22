@@ -5,6 +5,7 @@
 #include "IDrawable.h"
 #include <unordered_map>
 #include <typeinfo>
+#include <vector>
 
 namespace homer
 {
@@ -16,26 +17,45 @@ namespace homer
 
 		virtual void Start() {};
 
-		virtual void Update(float deltaTime) 
+		void Draw()
 		{
-			for (auto i = m_ComponentMap.find(Component))
+			for (auto c : m_Drawable)
 			{
-
+				c->Draw();
 			}
 		};
 
-		virtual void Draw() 
+		void Update(float deltaTime) 
 		{
-			for (int i = 0; i < m_Updateables.size(); i++)
+			for (auto c : m_Updateable)
 			{
-		
+				c->Update(deltaTime);
 			}
 		};
 
-		void AddComponent(Component* cmp)
+		template <class T>
+		class TestComponent : public Component
+		{
+		public:
+			void AddComponent();
+
+		};
+
+		template<Component* C> C AddComponent(C cmp)
 		{
 			const type_info* type = &typeid(*cmp);
-			m_ComponentMap.emplace(type, cmp);
+			m_Component.emplace_back(cmp);
+
+			if(auto* u = dynamic_cast<IUpdateable*>(cmp))
+			{ 
+				m_Updateable.push_back(u);
+			}
+
+			if (auto* d = dynamic_cast<IDrawable*>(cmp))
+			{
+				m_Drawable.push_back(d);
+			}
+
 		};
 		
 		virtual void Destroy() {};
@@ -43,6 +63,9 @@ namespace homer
 
 	private:
 		std::string m_name;
-		std::unordered_map<Component, std::string> m_ComponentMap;
+		std::vector<Component*> m_Component;
+		std::vector<IUpdateable*> m_Updateable;
+		std::vector<IDrawable*> m_Drawable;
+		
 	};
 }

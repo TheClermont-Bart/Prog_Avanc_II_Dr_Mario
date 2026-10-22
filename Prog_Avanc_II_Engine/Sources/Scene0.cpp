@@ -1,5 +1,6 @@
 #include "Scene0.h"
 #include "Engine.h"
+#include "Square.h"
 
 void Scene0::Load()
 {
@@ -8,7 +9,7 @@ void Scene0::Load()
 	m_background = eng->Get()->Gfx()->LoadTexture("standby.jpg");
 	eng->Get()->Gfx()->DrawTexture(m_background, {255,255,255,255});
 
-	eng->World()->AddEntity("Scene0")->AddComponent();
+	eng->World()->AddEntity("Scene0")->AddComponent(new Square());
 
 
 }

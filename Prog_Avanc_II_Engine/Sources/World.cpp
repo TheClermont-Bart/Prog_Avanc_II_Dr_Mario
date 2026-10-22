@@ -13,7 +13,7 @@ homer::World::~World()
 homer::Entity* homer::World::AddEntity(const std::string & name)
 {
 	Entity* entity = new Entity(name);
-	
+	m_entityInWorld.push_back(entity);
 	return entity;
 }
 
