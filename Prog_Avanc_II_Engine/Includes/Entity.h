@@ -33,16 +33,8 @@ namespace homer
 			}
 		};
 
-		template <class T>
-		class TestComponent : public Component
-		{
-		public:
-			void AddComponent();
-
-		};
-
-		template<Component* C> C AddComponent(C cmp)
-		{
+		template<typename T> T* AddComponent() {
+			T* cmp = new T();
 			const type_info* type = &typeid(*cmp);
 			m_Component.emplace_back(cmp);
 
@@ -54,9 +46,14 @@ namespace homer
 			if (auto* d = dynamic_cast<IDrawable*>(cmp))
 			{
 				m_Drawable.push_back(d);
-			}
-
+			} 
+			return cmp;
 		};
+
+		template<typename T> T* GetComponent()
+		{
+			return m_Component;
+		}
 		
 		virtual void Destroy() {};
 		std::string& GetName() { return m_name; };

@@ -9,7 +9,9 @@ void Scene0::Load()
 	m_background = eng->Get()->Gfx()->LoadTexture("standby.jpg");
 	eng->Get()->Gfx()->DrawTexture(m_background, {255,255,255,255});
 
-	eng->World()->AddEntity("Scene0")->AddComponent(new Square());
+	eng->World()->AddEntity("Scene0")->AddComponent<Square>();
+
+	eng->World()->AddEntity("Scene0")->GetComponent<Square>();
 
 
 }
