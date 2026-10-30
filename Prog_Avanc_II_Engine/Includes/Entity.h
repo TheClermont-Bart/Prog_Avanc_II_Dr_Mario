@@ -36,7 +36,8 @@ namespace homer
 		template<typename T> T* AddComponent() {
 			T* cmp = new T();
 			const type_info* type = &typeid(*cmp);
-			m_Component.emplace_back(cmp);
+			m_Component.emplace(type,cmp);
+			cmp->SetEntity(this);
 
 			if(auto* u = dynamic_cast<IUpdateable*>(cmp))
 			{ 
@@ -52,15 +53,26 @@ namespace homer
 
 		template<typename T> T* GetComponent()
 		{
-			return m_Component;
+			const type_info* type = &typeid(T);
+
+			auto cmp = m_Component.find(type);
+
+			if(cmp == m_Component.end())
+			{
+				return nullptr;
+			}
+
+			return dynamic_cast<T*>(cmp->second);
 		}
 		
 		virtual void Destroy() {};
 		std::string& GetName() { return m_name; };
+		float x = 100.0f;
+		float y = 100.0f;
 
 	private:
 		std::string m_name;
-		std::vector<Component*> m_Component;
+		std::unordered_map<const type_info*,Component*> m_Component;
 		std::vector<IUpdateable*> m_Updateable;
 		std::vector<IDrawable*> m_Drawable;
 		
