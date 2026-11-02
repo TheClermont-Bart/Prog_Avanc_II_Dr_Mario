@@ -1,6 +1,7 @@
 #pragma once
 #include "Sprite.h"
-
+#include <string>
+#include <unordered_map>
 
 class Atlas: public Sprite
 {

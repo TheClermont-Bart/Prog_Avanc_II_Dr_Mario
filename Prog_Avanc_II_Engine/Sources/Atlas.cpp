@@ -2,20 +2,17 @@
 
 void Atlas::AddFrame(const std::string& name, int x, int y, int w, int h)
 {
-	m_sourceMap.emplace(name, (x, y, w, h));
+	m_sourceMap.emplace(name, RectI{ x, y, w, h });
 }
 
 void Atlas::SetFrame(const std::string& name)
 {
-	int h = m_sourceMap.find(name)->second.h;
-	int w = m_sourceMap.find(name)->second.w;
-	int x = m_sourceMap.find(name)->second.x;
-	int y = m_sourceMap.find(name)->second.y;
+	auto rect = m_sourceMap.find(name);
+	
+	if(rect == m_sourceMap.end())
+	{
+		return;
+	}
 
-	m_rect.h = h;
-	m_rect.w = w;
-	m_rect.y = y;
-	m_rect.x = x;
-
-	Load(name);
+	m_rect = rect->second;
 }
