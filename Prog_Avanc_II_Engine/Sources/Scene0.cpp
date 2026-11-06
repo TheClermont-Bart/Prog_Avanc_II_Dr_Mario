@@ -27,7 +27,7 @@ void Scene0::Load()
 	entity->x = 400.0f;
 	entity->y = 400.0f;
 	Animation * anima = entity->AddComponent<Animation>();
-	anima->Load("misc-2.png");
+	anima->Load("testmario.png");
 	anima->InitAnimation(2, 39, 40);
 	anima->AddClip("idle", 0, 2, 1.0f);
 	anima->Play("idle", true);
