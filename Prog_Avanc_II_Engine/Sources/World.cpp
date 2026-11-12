@@ -14,6 +14,7 @@ homer::Entity* homer::World::AddEntity(const std::string & name)
 {
 	Entity* entity = new Entity(name);
 	m_entityInWorld.push_back(entity);
+	m_entityMap[name] = entity;
 	return entity;
 }
 

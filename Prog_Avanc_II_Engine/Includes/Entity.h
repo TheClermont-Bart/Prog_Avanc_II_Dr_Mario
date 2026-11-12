@@ -13,7 +13,17 @@ namespace homer
 	{
 	public:
 		Entity(const std::string& name) : m_name(name) {};
-		virtual ~Entity() = default;
+		virtual ~Entity()
+		{
+			for (auto& cmp : m_Component)
+			{
+				cmp.second->Destroy();
+				delete cmp.second;
+			}
+			m_Component.clear();
+			m_Updateable.clear();
+			m_Drawable.clear();
+		};
 
 		virtual void Start() {};
 
@@ -63,6 +73,42 @@ namespace homer
 			}
 
 			return dynamic_cast<T*>(cmp->second);
+		}
+
+		template<typename T> void RemoveComponent()
+		{
+			const type_info* type = &typeid(T);
+
+			auto it = m_Component.find(type);
+
+			if (it == m_Component.end())
+			{
+				return; 
+			}
+
+			Component* cmp = it->second;
+
+			if (auto* u = dynamic_cast<IUpdateable*>(cmp))
+			{
+				auto uit = std::find(m_Updateable.begin(), m_Updateable.end(), u);
+				if (uit != m_Updateable.end())
+				{
+					m_Updateable.erase(uit);
+				}
+			}
+
+			if (auto* u = dynamic_cast<IDrawable*>(cmp))
+			{
+				auto uit = std::find(m_Drawable.begin(), m_Drawable.end(), u);
+				if (uit != m_Drawable.end())
+				{
+					m_Drawable.erase(uit);
+				}
+			}
+
+			cmp->Destroy();
+			delete cmp;
+			m_Component.erase(it);
 		}
 		
 		virtual void Destroy() {};

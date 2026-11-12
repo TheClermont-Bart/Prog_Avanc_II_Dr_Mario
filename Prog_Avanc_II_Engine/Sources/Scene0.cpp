@@ -42,6 +42,15 @@ void Scene0::Update(float deltatime)
 	{
 		eng->World()->Load("Scene1");
 	}
+
+	if (eng->Input()->IsKeyDown(static_cast<int>(EKey::EKEY_R)))
+	{
+		homer::Entity* entity = eng->World()->FindEntity("Animation");
+		if (entity != nullptr)
+		{
+			entity->RemoveComponent<Animation>();
+		}
+	}
 }
 
 void Scene0::Draw()
