@@ -3,11 +3,11 @@
 
 void Sprite::Load(const std::string& textureName)
 {
-    m_TextureId = homer::Engine::Get()->Gfx()->LoadTexture(textureName);
+    m_TextureId = Gfx()->LoadTexture(textureName);
 
     int w = 0;
     int h = 0;
-    homer::Engine::Get()->Gfx()->GetTexture(m_TextureId, &w, &h);
+    Gfx()->GetTexture(m_TextureId, &w, &h);
     m_rect = { 0, 0, w, h };
 }
 
@@ -20,6 +20,6 @@ void Sprite::Draw()
     static_cast<float>(m_rect.h)*m_scale
     };
 
-    homer::Engine::Get()->Gfx()->DrawTexture(m_TextureId, m_rect, dst, 0.0, m_flip, Color(255, 255, 255, 255));
+    Gfx()->DrawTexture(m_TextureId, m_rect, dst, 0.0, m_flip, Color(255, 255, 255, 255));
 
 }

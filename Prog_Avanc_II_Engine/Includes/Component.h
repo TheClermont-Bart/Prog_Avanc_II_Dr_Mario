@@ -1,7 +1,11 @@
 #pragma once
 
+class IInput;
+class IGfx;
+
 namespace homer {
 	class Entity;
+	class IWorld;
 }
 
 class Component 
@@ -19,4 +23,7 @@ public:
 	virtual void Destroy() {}
 protected:
 	homer::Entity* m_Entity = nullptr;
+	homer::IWorld* World();
+	IInput* Input();
+	IGfx* Gfx();
 };

@@ -33,7 +33,7 @@ homer::Entity* homer::World::FindEntity(const char* name)
 	return nullptr;
 }
 
-void homer::World::Register(const std::string& name, IScene* scene)
+void homer::World::Register(const std::string& name, BaseScene* scene)
 {
 	if(m_scenes.count(name) == 0)
 	{

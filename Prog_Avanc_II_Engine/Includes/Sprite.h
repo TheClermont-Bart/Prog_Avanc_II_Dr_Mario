@@ -12,6 +12,7 @@ public:
 	void Load(const std::string& textureName);
 	virtual void Draw() override;
 	void SetScale(float scale) { m_scale = scale; };
+	void SetFlipH(bool horizontal) { m_flip.h = horizontal; };
 protected:
 	RectI m_rect{};
 private:
