@@ -1,8 +1,6 @@
 #include "Scene0.h"
 #include "Engine.h"
-#include "Square.h"
 #include "Sprite.h"
-#include "Controller.h"
 #include "Atlas.h"
 #include "Animation.h"
 

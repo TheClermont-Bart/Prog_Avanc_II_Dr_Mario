@@ -4,6 +4,7 @@
 #include "IInput.h"
 #include "ILogger.h"
 #include "IWorld.h"
+#include "ICollision.h"
 
 class SdlInput;
 
@@ -24,6 +25,7 @@ namespace homer {
 		ILogger* Logger() { return m_logger; };
 		ISfx* Sound() { return m_sound; };
 		IWorld* World() { return m_world; };
+		ICollision* Collision() { return m_collision; };
 		int WindowWidth() { return m_windowWidth; };
 		int WindowHeight() { return m_windowHeight; };
 	private:
@@ -37,6 +39,7 @@ namespace homer {
 		ILogger* m_logger = nullptr;
 		ISfx* m_sound = nullptr;
 		IWorld* m_world = nullptr;
+		ICollision* m_collision = nullptr;
 		bool m_isRunning = false;
 		bool m_isInit = false;
 		float m_deltaTime = 0.0f;

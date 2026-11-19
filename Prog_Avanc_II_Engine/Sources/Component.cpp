@@ -15,3 +15,8 @@ homer::IWorld* Component::World()
 {
     return homer::Engine::Get()->World();
 }
+
+homer::ICollision* Component::Collision()
+{
+    return homer::Engine::Get()->Collision();
+}

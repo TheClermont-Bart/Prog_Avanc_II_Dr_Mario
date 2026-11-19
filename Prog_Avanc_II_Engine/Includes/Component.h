@@ -6,6 +6,7 @@ class IGfx;
 namespace homer {
 	class Entity;
 	class IWorld;
+	class ICollision;
 }
 
 class Component 
@@ -19,11 +20,13 @@ public:
 	{
 		m_Entity = entity;
 	}
+	homer::Entity* GetEntity() { return m_Entity; }
 	virtual void Start() {}
 	virtual void Destroy() {}
 protected:
 	homer::Entity* m_Entity = nullptr;
 	homer::IWorld* World();
+	homer::ICollision* Collision();
 	IInput* Input();
 	IGfx* Gfx();
 };

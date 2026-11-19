@@ -5,10 +5,10 @@
 
 namespace homer { class Entity; }
 
-class Controller : public Component, public IUpdateable
+class PlayerController : public Component, public IUpdateable
 {
 public:
-	Controller();
+	PlayerController();
 	void Update(float deltaTime) override;
 private:
 	std::string m_currentClip;

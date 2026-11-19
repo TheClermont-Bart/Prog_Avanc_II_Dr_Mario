@@ -1,8 +1,8 @@
 #include "Scene1.h"
 #include "Engine.h"
-#include "Square.h"
-#include "Controller.h"
+#include "PlayerController.h"
 #include "Animation.h"
+#include "Collider.h"
 
 void Scene1::Load()
 {
@@ -12,6 +12,10 @@ void Scene1::Load()
 	player->x = m_engine->WindowWidth() / 2.0f - 25.0f;
 	player->y = m_engine->WindowHeight() / 2.0f - 25.0f;
 
+	Collider* collider = player->AddComponent<Collider>();
+	collider->SetSize(39.0f, 40.0f);
+	collider->Start();
+
 	Animation* anim = player->AddComponent<Animation>();
 	anim->Load("images/testmario.png");
 	anim->InitAnimation(2, 39, 40);
@@ -19,7 +23,7 @@ void Scene1::Load()
 	anim->AddClip("walk", 1, 1, 0.2f);
 	anim->Play("idle", true);
 	anim->SetScale(2.0f);
-	player->AddComponent<Controller>();
+	player->AddComponent<PlayerController>();
 
 	homer::Entity* entity2 = Instantiate("AtlasTest");
 	entity2->x = m_engine->WindowWidth() - 39.0f * 5.0f;
@@ -29,6 +33,10 @@ void Scene1::Load()
 	atlas->AddFrame("frame0", 0, 0, 39, 40);
 	atlas->SetFrame("frame0");
 	atlas->SetScale(5.0f);
+
+	Collider* collider2 = entity2->AddComponent<Collider>();
+	collider2->SetSize(39.0f * 5.0f, 40.0f * 5.0f);
+	collider2->Start();
 }
 
 void Scene1::Draw()

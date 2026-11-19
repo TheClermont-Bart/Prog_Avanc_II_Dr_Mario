@@ -1,15 +1,16 @@
-#include "Controller.h"
+#include "PlayerController.h"
 #include "Entity.h"
 #include "Engine.h"
 #include "Animation.h"
-#include "Square.h"
+#include "Bullet.h"
+#include "Collider.h"
 
-Controller::Controller()	
+PlayerController::PlayerController()	
 {
 
 }
 
-void Controller::Update(float deltaTime)
+void PlayerController::Update(float deltaTime)
 {
 	float speed = 200.0f;
 	bool moving = false;
@@ -63,8 +64,13 @@ void Controller::Update(float deltaTime)
         static int count = 0;
         homer::Entity* spawned = World()->AddEntity("Spawn");
         spawned->x = m_Entity->x + 40.0f;
-        spawned->y = m_Entity->y;
-        spawned->AddComponent<Square>();
+        spawned->y = m_Entity->y + 20.0f;
+
+        Collider* collider = spawned->AddComponent<Collider>();
+        collider->SetSize(10.0f, 10.0f);
+		collider->Start();
+        
+        spawned->AddComponent<Bullet>()->SetSpeed(300.0f);
         m_lastSpawn = spawned;
     }
 

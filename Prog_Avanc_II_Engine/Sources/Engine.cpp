@@ -3,6 +3,7 @@
 #include "SdlInput.h"
 #include "SdlSfx.h"
 #include "World.h"
+#include "Collision.h"
 #include <Windows.h>
 #include <ctime>
 
@@ -19,6 +20,7 @@ bool homer::Engine::Init(const char* title, int width, int height)
 	m_input = new SdlInput();
 	m_sound = new SdlSfx();
 	m_world = new homer::World();
+	m_collision = new homer::Collision();
 
 	m_windowHeight = height;
 	m_windowWidth = width;
@@ -126,6 +128,11 @@ void homer::Engine::Shutdown()
 		m_sound = nullptr;
 	}
 
+	if(m_collision != nullptr)
+	{
+		delete m_collision;
+		m_collision = nullptr;
+	}
 }
 
 void homer::Engine::Exit()
