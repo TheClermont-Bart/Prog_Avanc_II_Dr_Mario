@@ -17,4 +17,6 @@ public:
 	virtual void ResumeMusic() override;
 	virtual void SetVolume(int volume) override;
 	virtual void SetVolume(size_t soundId, int volume) override;
+private:
+	void clearCaches();
 };
