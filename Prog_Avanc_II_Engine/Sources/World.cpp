@@ -10,11 +10,12 @@ homer::World::~World()
 	m_scenes.clear();
 }
 
-void homer::World::AddEntity(Entity* entity)
+homer::Entity* homer::World::AddEntity(const std::string & name)
 {
-	m_entityInWorld.emplace_back(entity);
-	m_entityMap.emplace(entity->GetName(), entity);
-	entity->Start();
+	Entity* entity = new Entity(name);
+	m_entityInWorld.push_back(entity);
+	m_entityMap[name] = entity;
+	return entity;
 }
 
 void homer::World::RemoveEntity(Entity* entity)
@@ -32,7 +33,7 @@ homer::Entity* homer::World::FindEntity(const char* name)
 	return nullptr;
 }
 
-void homer::World::Register(const std::string& name, IScene* scene)
+void homer::World::Register(const std::string& name, BaseScene* scene)
 {
 	if(m_scenes.count(name) == 0)
 	{

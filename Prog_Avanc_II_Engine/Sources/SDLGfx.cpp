@@ -174,8 +174,8 @@ void SdlGfx::DrawTexture(size_t id, const Color& color)
 	GetTexture(id, &w, &h);
 
 	RectF dst;
-	dst.h = h;
-	dst.w = w;
+	dst.h = (float)h;
+	dst.w = (float)w;
 	dst.x = 0.0f;
 	dst.y = 0.0f;
 
@@ -213,8 +213,8 @@ void SdlGfx::DrawString(const std::string& text, size_t fontId, float x, float y
 	if (m_fontCache.count(fontId) > 0)
 	{
 		TTF_Font* font = m_fontCache[fontId];
-		SDL_Color color = { color.r, color.g, color.b, color.a };
-		SDL_Surface* surface = TTF_RenderText_Solid(font, text.c_str(), color);
+		SDL_Color col = { color.r, color.g, color.b, color.a };
+		SDL_Surface* surface = TTF_RenderText_Solid(font, text.c_str(), col);
 
 		if (surface == nullptr)
 		{
